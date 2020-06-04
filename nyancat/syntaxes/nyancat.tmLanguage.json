@@ -1,0 +1,92 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "nyancat",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#labels_define"
+		},
+		{
+			"include": "#labels_use"
+		},
+		{
+			"include": "#words"
+		},
+		{
+			"include": "#nums"
+		},
+		{
+			"include": "#system_registers"
+		},
+		{
+			"include": "#params"
+		},
+		{
+			"include": "#comments_block"
+		},
+		{
+			"include": "#comments_line"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.nyancat",
+				"match": "\\b(end|put|mov|cmp|je|jne|jg|jge|jl|jle|jmp|m|h|x|y|z)\\b"
+			}]
+		},
+		"labels_define" : {
+			"name": "string.unquoted.nyancat",
+			"captures": {
+				"0": {
+					"name": "markup.bold.nyancat"
+				}
+			},
+			"match": "^:[a-zA-Z_]\\w*"
+		},
+		"labels_use" : {
+			"name":"string.unquoted.nyancat",
+			"match": "( {1,}):[a-zA-Z_]\\w*"
+		},
+		"words" : {
+			"name":"variable.name.nyancat",
+			"match": "( )[a-zA-Z_]\\w*"
+		},
+		"nums" : {
+			"name":"constant.numeric.nyancat",
+			"match": "[0-9]\\w*"
+		},
+		"system_registers" : {
+			"name":"entity.name.function",
+			"match": "%[0-9]\\w*"
+		},
+		"params": {
+			"name": "variable.name.nyancat",
+			"begin": "<",
+			"beginCaptures": {
+				"0": {
+					"name": "support.type.property-name.nyancat"
+				}
+			},
+			"end": ">",
+			"endCaptures": {
+				"0": {
+					"name": "support.type.property-name.nyancat"
+				}
+			}
+		},
+		"comments_block": {
+			"name": "comment.block.nyancat",
+			"begin": "/\\*",
+			"end": "\\*/"
+		},
+		"comments_line": {
+			"name": "comment.line.double-slash.nyancat",
+			"begin": "//",
+			"end": "$\n?"
+		}
+	},
+	"scopeName": "source.nyancat"
+}

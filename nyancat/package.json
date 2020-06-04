@@ -1,0 +1,25 @@
+{
+    "name": "nyancat",
+    "displayName": "nyancat",
+    "description": "nyancat language support and debugging for Visual Studio Code",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.45.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "nyancat",
+            "aliases": ["nyancat", "nyancat"],
+            "extensions": [".nya"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nyancat",
+            "scopeName": "source.nyancat",
+            "path": "./syntaxes/nyancat.tmLanguage.json"
+        }]
+    }
+}
