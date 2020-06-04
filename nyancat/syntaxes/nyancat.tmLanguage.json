@@ -18,7 +18,13 @@
 			"include": "#nums"
 		},
 		{
-			"include": "#system_registers"
+			"include": "#sys_bits"
+		},
+		{
+			"include": "#bits"
+		},
+		{
+			"include": "#qubits"
 		},
 		{
 			"include": "#params"
@@ -38,42 +44,45 @@
 			}]
 		},
 		"labels_define" : {
-			"name": "string.unquoted.nyancat",
-			"captures": {
-				"0": {
-					"name": "markup.bold.nyancat"
-				}
-			},
-			"match": "^:[a-zA-Z_]\\w*"
+			"name": "markup.bold.nyancat",
+			"match": "^[ ]*[A-Z]{1}([A-Za-z0-9_]*)\\w*"
 		},
 		"labels_use" : {
-			"name":"string.unquoted.nyancat",
-			"match": "( {1,}):[a-zA-Z_]\\w*"
+			"name": "markup.bold.nyancat",
+			"match": "[ ]{1,}[A-Z]{1}([A-Za-z0-9_]*)\\w*"
 		},
 		"words" : {
-			"name":"variable.name.nyancat",
-			"match": "( )[a-zA-Z_]\\w*"
+			"name": "variable.name.nyancat",
+			"match": "[a-zA-Z_]\\w*"
 		},
 		"nums" : {
-			"name":"constant.numeric.nyancat",
-			"match": "[0-9]\\w*"
+			"name":"variable.name.nyancat",
+			"match": "[0-9]{1,}( |$)"
 		},
-		"system_registers" : {
-			"name":"entity.name.function",
-			"match": "%[0-9]\\w*"
+		"sys_bits" : {
+			"name": "entity.name.function.nyancat",
+			"match": "[0-9]{1,}%( |$)"
+		},
+		"bits" : {
+			"name": "constant.character.nyanct",
+			"match": "[0-9]{1,}!( |$)"
+		},
+		"qubits" : {
+			"name": "constant.numeric.nyancat",
+			"match": "[0-9]{1,}\\?( |$)"
 		},
 		"params": {
 			"name": "variable.name.nyancat",
 			"begin": "<",
 			"beginCaptures": {
 				"0": {
-					"name": "support.type.property-name.nyancat"
+					"name": "variable.language"
 				}
 			},
 			"end": ">",
 			"endCaptures": {
 				"0": {
-					"name": "support.type.property-name.nyancat"
+					"name": "variable.language"
 				}
 			}
 		},
