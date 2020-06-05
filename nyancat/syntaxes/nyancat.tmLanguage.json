@@ -6,10 +6,7 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#labels_define"
-		},
-		{
-			"include": "#labels_use"
+			"include": "#labels"
 		},
 		{
 			"include": "#words"
@@ -43,17 +40,13 @@
 				"match": "\\b(end|put|mov|cmp|je|jne|jg|jge|jl|jle|jmp|m|h|x|y|z)\\b"
 			}]
 		},
-		"labels_define" : {
+		"labels" : {
 			"name": "markup.bold.nyancat",
-			"match": "^[ ]*[A-Z]{1}([A-Za-z0-9_]*)\\w*"
-		},
-		"labels_use" : {
-			"name": "markup.bold.nyancat",
-			"match": "[ ]{1,}[A-Z]{1}([A-Za-z0-9_]*)\\w*"
+			"match": "[A-Z]([A-Za-z0-9_]*)\\w*"
 		},
 		"words" : {
 			"name": "variable.name.nyancat",
-			"match": "[a-zA-Z_]\\w*"
+			"match": "[a-z]([A-Za-z0-9_]*)\\w+"
 		},
 		"nums" : {
 			"name":"variable.name.nyancat",
