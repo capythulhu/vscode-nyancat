@@ -23,7 +23,7 @@
         "grammars": [{
             "language": "nyancat",
             "scopeName": "source.nyancat",
-            "path": "./syntaxes/nyancat.tmLanguage.json"
+            "path": "./syntaxes/nyancat.tmLanguage"
         }],
         "snippets": [
             {
