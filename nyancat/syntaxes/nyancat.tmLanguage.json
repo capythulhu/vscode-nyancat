@@ -46,7 +46,7 @@
 		},
 		"words" : {
 			"name": "variable.name.nyancat",
-			"match": "[a-z]([A-Za-z0-9_]*)\\w+"
+			"match": "[a-z_]([A-Za-z0-9_]*)\\w+"
 		},
 		"nums" : {
 			"name":"variable.name.nyancat",

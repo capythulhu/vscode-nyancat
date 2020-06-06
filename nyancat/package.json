@@ -1,13 +1,17 @@
 {
+    "publisher": "thzoid",
     "name": "nyancat",
     "displayName": "nyancat",
-    "description": "nyancat language support and debugging for Visual Studio Code",
+    "description": "nyancat language syntax highlight and snippets for Visual Studio Code",
     "version": "0.0.1",
+    "icon": "https://github.com/thzoid/vscode-nyancat/blob/master/nyancat/images/icon_small.png?raw=true",
+    "repository": {"url": "https://github.com/thzoid/vscode-nyancat"},
     "engines": {
         "vscode": "^1.45.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
     "contributes": {
         "languages": [{
@@ -20,6 +24,12 @@
             "language": "nyancat",
             "scopeName": "source.nyancat",
             "path": "./syntaxes/nyancat.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+              "language": "nyancat",
+              "path": "./snippets.json"
+            }
+          ]
     }
 }
