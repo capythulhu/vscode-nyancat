@@ -8,7 +8,7 @@ This extension provides nyancat language support for Visual Studio Code
  - Snippets for all the available tasks
  - Additional useful snippets
 
-![Syntax highlighting and snippets](https://github.com/thzoid/vscode-nyancat/blob/master/nyancat/images/sample.gif)
+![Syntax highlighting and snippets](images/sample.gif)
 
 ## Requirements
 
