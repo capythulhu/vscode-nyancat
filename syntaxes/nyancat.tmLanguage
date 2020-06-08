@@ -75,7 +75,7 @@
         <key>name</key>
         <string>variable.name.nyancat</string>
         <key>match</key>
-        <string>[a-z_]([A-Za-z0-9_]*)\w+</string>
+        <string>[a-z_]*([A-Za-z0-9_]*)\w+</string>
       </dict>
       <key>nums</key>
       <dict>
