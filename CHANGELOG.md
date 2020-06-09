@@ -2,6 +2,14 @@
 
 All notable changes to the "nyancat" extension will be documented in this file.
 
+## 1.0.0
+
+Features:
+ - Full support for nyancat H (1.0)
+
+Bug fixes:
+- Fix token highlighting not working on numeric types.
+
 ## 0.0.2
 
 Bug fixes:

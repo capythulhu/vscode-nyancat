@@ -3,7 +3,7 @@
     "name": "nyancat",
     "displayName": "nyancat",
     "description": "nyancat language syntax highlight and snippets for Visual Studio Code",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "icon": "images/icon_small.png",
     "repository": {"url": "https://github.com/thzoid/vscode-nyancat"},
     "engines": {

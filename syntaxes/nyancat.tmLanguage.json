@@ -9,9 +9,6 @@
       "include": "#labels"
     },
     {
-      "include": "#words"
-    },
-    {
       "include": "#nums"
     },
     {
@@ -22,6 +19,9 @@
     },
     {
       "include": "#qubits"
+    },
+    {
+      "include": "#words"
     },
     {
       "include": "#params"
@@ -38,17 +38,13 @@
       "patterns": [
         {
           "name": "keyword.control.nyancat",
-          "match": "\\b(end|put|mov|cmp|je|jne|jg|jge|jl|jle|jmp|m|h|x|y|z)\\b"
+          "match": "\\b(end|put|mov|cmp|je|jne|jg|jge|jl|jle|jmp|add|sub|mul|div|m|h|x|y|z)\\b"
         }
       ]
     },
     "labels": {
       "name": "markup.bold.nyancat",
       "match": "[A-Z]([A-Za-z0-9_]*)\\w*"
-    },
-    "words": {
-      "name": "variable.name.nyancat",
-      "match": "[a-z_]*([A-Za-z0-9_]*)\\w+"
     },
     "nums": {
       "name": "variable.name.nyancat",
@@ -65,6 +61,10 @@
     "qubits": {
       "name": "constant.numeric.nyancat",
       "match": "[0-9]{1,}\\?( |$)"
+    },
+    "words": {
+      "name": "variable.name.nyancat",
+      "match": "[a-z_]*([A-Za-z0-9_]*)\\w+"
     },
     "params": {
       "name": "variable.name.nyancat",

@@ -18,10 +18,6 @@
       </dict>
       <dict>
         <key>include</key>
-        <string>#words</string>
-      </dict>
-      <dict>
-        <key>include</key>
         <string>#nums</string>
       </dict>
       <dict>
@@ -35,6 +31,10 @@
       <dict>
         <key>include</key>
         <string>#qubits</string>
+      </dict>
+      <dict>
+        <key>include</key>
+        <string>#words</string>
       </dict>
       <dict>
         <key>include</key>
@@ -59,7 +59,7 @@
             <key>name</key>
             <string>keyword.control.nyancat</string>
             <key>match</key>
-            <string>\b(end|put|mov|cmp|je|jne|jg|jge|jl|jle|jmp|m|h|x|y|z)\b</string>
+            <string>\b(end|put|mov|cmp|je|jne|jg|jge|jl|jle|jmp|add|sub|mul|div|m|h|x|y|z)\b</string>
           </dict>
         </array>
       </dict>
@@ -69,13 +69,6 @@
         <string>markup.bold.nyancat</string>
         <key>match</key>
         <string>[A-Z]([A-Za-z0-9_]*)\w*</string>
-      </dict>
-      <key>words</key>
-      <dict>
-        <key>name</key>
-        <string>variable.name.nyancat</string>
-        <key>match</key>
-        <string>[a-z_]*([A-Za-z0-9_]*)\w+</string>
       </dict>
       <key>nums</key>
       <dict>
@@ -104,6 +97,13 @@
         <string>constant.numeric.nyancat</string>
         <key>match</key>
         <string>[0-9]{1,}\?( |$)</string>
+      </dict>
+      <key>words</key>
+      <dict>
+        <key>name</key>
+        <string>variable.name.nyancat</string>
+        <key>match</key>
+        <string>[a-z_]*([A-Za-z0-9_]*)\w+</string>
       </dict>
       <key>params</key>
       <dict>

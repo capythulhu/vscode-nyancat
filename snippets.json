@@ -54,6 +54,26 @@
 		"body": ["jle ${1:Label}", "$0"],
 		"description": "Jumps to a specified label if a previous cmp outputted equality or negative difference."
 	},
+	"Add values": {
+		"prefix": ["add"],
+		"body": ["add ${1:first pointer}! ${2:second pointer}!", "$0"],
+		"description": "Adds the value on the second pointer to the value on the first one."
+	},
+	"Subtract values": {
+		"prefix": ["sub"],
+		"body": ["sub ${1:first pointer}! ${2:second pointer}!", "$0"],
+		"description": "Subtracts the value on the second pointer to the value on the first one."
+	},
+	"Multiply values": {
+		"prefix": ["mul"],
+		"body": ["mul ${1:first pointer}! ${2:second pointer}!", "$0"],
+		"description": "Multiplies the value on the second pointer to the value on the first one."
+	},
+	"Divide values": {
+		"prefix": ["div"],
+		"body": ["div ${1:first pointer}! ${2:second pointer}!", "$0"],
+		"description": "Divides the value on the second pointer to the value on the first one."
+	},
 	"Measure qubit": {
 		"prefix": ["m"],
 		"body": ["m ${1:qubit}?", "$0"],
@@ -88,6 +108,6 @@
 		"prefix": ["test"],
 		"body": ["h ${1:qubit}?", "m ${1:qubit}?", "cmp ${2:value}", "je ${3:Label}", "$0"],
 		"description": "Generates a random bit by collapsing a qubit and compares it with a value."
-	},
+	}
 }
 	
