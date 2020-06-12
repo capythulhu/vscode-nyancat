@@ -6,6 +6,9 @@
       "include": "#keywords"
     },
     {
+      "include": "#values"
+    },
+    {
       "include": "#labels"
     },
     {
@@ -38,9 +41,13 @@
       "patterns": [
         {
           "name": "keyword.control.nyancat",
-          "match": "\\b(end|put|mov|cmp|je|jne|jg|jge|jl|jle|jmp|add|sub|mul|div|m|h|x|y|z)\\b"
+          "match": "^[ ]*(end|put|mov|cmp|je|jne|jg|jge|jl|jle|jmp|add|sub|mul|div|m|h|x|y|z)\\b"
         }
       ]
+    },
+    "values": {
+      "name": "entity.name.nyancat",
+      "match": "[\\[\\]]"
     },
     "labels": {
       "name": "markup.bold.nyancat",
@@ -52,15 +59,15 @@
     },
     "sys_bits": {
       "name": "entity.name.function.nyancat",
-      "match": "[0-9]{1,}%( |$)"
+      "match": "[0-9]{1,}%"
     },
     "bits": {
       "name": "constant.character.nyanct",
-      "match": "[0-9]{1,}!( |$)"
+      "match": "[0-9]{1,}!"
     },
     "qubits": {
       "name": "constant.numeric.nyancat",
-      "match": "[0-9]{1,}\\?( |$)"
+      "match": "[0-9]{1,}\\?"
     },
     "words": {
       "name": "variable.name.nyancat",

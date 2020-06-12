@@ -1,6 +1,6 @@
-# nyancat README
+# vscode-nyancat
 
-This extension provides nyancat language support for Visual Studio Code
+This extension provides nyancat language support for Visual Studio Code.
 
 ## Features
 

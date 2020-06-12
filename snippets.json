@@ -6,108 +6,181 @@
 	},
 	"End algorithm": {
 		"prefix": ["end"],
-		"body": ["end ${1:pointer}!", "$0"],
+		"body": [
+			"end ${1:value}",
+			"$0"
+		],
 		"description": "Moves the value of the classical register to the ARR."
 	},
 	"Move values": {
 		"prefix": ["mov"],
-		"body": ["mov ${1:first pointer}! ${2:second pointer}!", "$0"],
+		"body": [
+			"mov ${1:pointer}! ${2:value}",
+			"$0"
+		],
 		"description": "Moves a value from the second classical register to the first one."
-	},
-	"Insert value": {
-		"prefix": ["put"],
-		"body": ["put ${1:pointer}! ${2:value}", "$0"],
-		"description": "Inserts the provided value into the specified classical register."
 	},
 	"Compare values": {
 		"prefix": ["cmp"],
-		"body": ["cmp ${1:value}", "$0"],
+		"body": [
+			"cmp ${1:pointer}! ${2:value}",
+			"$0"
+		],
 		"description": "Compares the provided value with the TRR value and returns the result."
 	},
 	"Jump if equal": {
 		"prefix": ["je"],
-		"body": ["je ${1:Label}", "$0"],
+		"body": [
+			"je ${1:Label}",
+			"$0"
+		],
 		"description": "Jumps to a specified label if a previous cmp outputted equality."
 	},
 	"Jump if not equal": {
 		"prefix": ["jne"],
-		"body": ["jne ${1:Label}", "$0"],
+		"body": [
+			"jne ${1:Label}",
+			"$0"
+		],
 		"description": "Jumps to a specified label if a previous cmp outputted inequality."
 	},
 	"Jump if greater": {
 		"prefix": ["jg"],
-		"body": ["jg ${1:Label}", "$0"],
+		"body": [
+			"jg ${1:Label}",
+			"$0"
+		],
 		"description": "Jumps to a specified label if a previous cmp outputted positive difference."
 	},
 	"Jump if greater or equal": {
 		"prefix": ["jge"],
-		"body": ["jge ${1:Label}", "$0"],
+		"body": [
+			"jge ${1:Label}",
+			"$0"
+		],
 		"description": "Jumps to a specified label if a previous cmp outputted equality or positive difference."
 	},
 	"Jump if lower": {
 		"prefix": ["jl"],
-		"body": ["jl ${1:Label}", "$0"],
+		"body": [
+			"jl ${1:Label}",
+			"$0"
+		],
 		"description": "Jumps to a specified label if a previous cmp outputted negative difference."
 	},
 	"Jump if lower or equal": {
 		"prefix": ["jle"],
-		"body": ["jle ${1:Label}", "$0"],
+		"body": [
+			"jle ${1:Label}",
+			"$0"
+		],
 		"description": "Jumps to a specified label if a previous cmp outputted equality or negative difference."
 	},
 	"Add values": {
 		"prefix": ["add"],
-		"body": ["add ${1:first pointer}! ${2:second pointer}!", "$0"],
+		"body": [
+			"add ${1:pointer}! ${2:value}",
+			"$0"
+		],
 		"description": "Adds the value on the second pointer to the value on the first one."
 	},
 	"Subtract values": {
 		"prefix": ["sub"],
-		"body": ["sub ${1:first pointer}! ${2:second pointer}!", "$0"],
+		"body": [
+			"sub ${1:pointer}! ${2:value}",
+			"$0"
+		],
 		"description": "Subtracts the value on the second pointer to the value on the first one."
 	},
 	"Multiply values": {
 		"prefix": ["mul"],
-		"body": ["mul ${1:first pointer}! ${2:second pointer}!", "$0"],
+		"body": [
+			"mul ${1:pointer}! ${2:value}",
+			"$0"
+		],
 		"description": "Multiplies the value on the second pointer to the value on the first one."
 	},
 	"Divide values": {
 		"prefix": ["div"],
-		"body": ["div ${1:first pointer}! ${2:second pointer}!", "$0"],
+		"body": [
+			"div ${1:pointer}! ${2:value}",
+			"$0"
+		],
 		"description": "Divides the value on the second pointer to the value on the first one."
 	},
 	"Measure qubit": {
 		"prefix": ["m"],
-		"body": ["m ${1:qubit}?", "$0"],
+		"body": [
+			"m ${1:qubit}?",
+			"$0"
+		],
 		"description": "Measures the specified quantum register and returns the result."
 	},
 	"Apply Hadamard gate on qubit": {
 		"prefix": ["h"],
-		"body": ["h ${1:qubit}?", "$0"],
+		"body": [
+			"h ${1:qubit}?",
+			"$0"
+		],
 		"description": "Performs the Hadamard gate on the specified quantum register."
 	},
 	"Apply Pauli's X gate on qubit": {
 		"prefix": ["x"],
-		"body": ["x ${1:qubit}?", "$0"],
+		"body": [
+			"x ${1:qubit}?",
+			"$0"
+		],
 		"description": "Performs the Pauli's X gate on the specified quantum register."
 	},
 	"Apply Pauli's Y gate on qubit": {
 		"prefix": ["y"],
-		"body": ["y ${1:qubit}?", "$0"],
+		"body": [
+			"y ${1:qubit}?",
+			"$0"
+		],
 		"description": "Performs the Pauli's Y gate on the specified quantum register."
 	},
 	"Apply Pauli's Z gate on qubit": {
 		"prefix": ["z"],
-		"body": ["z ${1:qubit}?", "$0"],
+		"body": [
+			"z ${1:qubit}?",
+			"$0"
+		],
 		"description": "Performs the Pauli's Z gate on the specified quantum register."
 	},
 	"Random bit from qubit": {
 		"prefix": ["random"],
-		"body": ["h ${1:qubit}?", "m ${1:qubit}?", "$0"],
+		"body": [
+			"h ${1:qubit}?",
+			"m ${1:qubit}?",
+			"$0"
+		],
 		"description": "Generates a random bit by performing a Hadamard gate on a specified qubit and then measuring it."
 	},
 	"Random bit test": {
 		"prefix": ["test"],
-		"body": ["h ${1:qubit}?", "m ${1:qubit}?", "cmp ${2:value}", "je ${3:Label}", "$0"],
+		"body": [
+			"h ${1:qubit}?",
+			"m ${1:qubit}?",
+			"cmp ${2:pointer}! ${3:value}",
+			"je ${4:Label}",
+			"$0"
+		],
+		"description": "Generates a random bit by collapsing a qubit and compares it with a value."
+	},
+	"For loop": {
+		"prefix": ["for", "loop"],
+		"body": [
+			"< ${1:iterations} >",
+			"${2:For}",
+			"cmp ${3:pointer}! ${1:iterations}",
+			"je ${4:End}",
+			"$0",
+			"add ${3:pointer}! 1",
+			"jmp ${2:For}",
+			"${4:End}",
+			"end [${3:pointer}!]"
+		],
 		"description": "Generates a random bit by collapsing a qubit and compares it with a value."
 	}
 }
-	
