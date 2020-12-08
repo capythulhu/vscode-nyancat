@@ -41,7 +41,7 @@
       "patterns": [
         {
           "name": "keyword.control.nyancat",
-          "match": "^[ ]*(end|put|mov|cmp|je|jne|jg|jge|jl|jle|jmp|add|sub|mul|div|m|h|x|y|z)\\b"
+          "match": "^[ ]*(end|mov|cmp|jmp|je|jne|jg|jge|jl|jle|add|sub|mul|div|m|h|x|y|z)\\b"
         }
       ]
     },

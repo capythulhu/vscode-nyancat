@@ -1,9 +1,9 @@
 'use strict';
 import * as vscode from 'vscode';
 import * as path from 'path';
+import {getDiagnostics} from './lexer';
 
 export function activate(context: vscode.ExtensionContext) {
-
 	const collection = vscode.languages.createDiagnosticCollection('nyancat');
 	if (vscode.window.activeTextEditor) {
 		updateDiagnostics(vscode.window.activeTextEditor.document, collection);
@@ -17,16 +17,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 function updateDiagnostics(document: vscode.TextDocument, collection: vscode.DiagnosticCollection): void {
 	if (document && path.basename(document.uri.fsPath).endsWith(".nya")) {
-		collection.set(document.uri, [{
-			code: '',
-			message: `Unecessary spaces before declaration.`,
-			range: new vscode.Range(new vscode.Position(0, 0), new vscode.Position(3, 0)),
-			severity: vscode.DiagnosticSeverity.Warning,
-			source: '',
-			// relatedInformation: [
-			// 	new vscode.DiagnosticRelatedInformation(new vscode.Location(document.uri, new vscode.Range(new vscode.Position(1, 8), new vscode.Position(1, 9))), 'first assignment to `x`')
-			// ]
-		}]);
+		console.log('fgh');
+		//collection.set(document.uri, getDiagnostics(document));
 	} else {
 		collection.clear();
 	}
